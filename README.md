@@ -16,7 +16,7 @@ When you save places in Google Maps, you can export them to a CSV file, but the 
 
 This enriched data can be useful for:
 
-- Feeding it to an LLM as a .csv to then be able to ask it questions like: "Where does Chris recommend for a bakery in Islington?"
+- Feeding it to an LLM as a .csv to then be able to ask it questions like: "Where does Chris recommend for a pizza in Islington?"
 
 ## Prerequisites
 
@@ -26,30 +26,31 @@ This enriched data can be useful for:
 
 ## Installation
 
-1. Clone this repository:
+1. Go to [Google Takeout](https://takeout.google.com/) and download your saved places as a CSV file.
+2. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/google-saved-places-data-enricher.git
+git clone https://github.com/chrisbmar/google-saved-places-data-enricher.git
 cd google-saved-places-data-enricher
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Create a `.env` file in the root directory and add your Google Maps API key:
+4. Create a `.env` file in the root directory and add your Google Maps API key:
 
 ```
 GOOGLE_MAPS_API_KEY=your_api_key_here
 ```
 
-4. Place your Google Saved Places CSV file in the `data` directory as `saved_places.csv`
+5. Place your Google Saved Places CSV file in the `data` directory as `saved_places.csv`
 
 ## Usage
 
-1. Make sure your `saved_places.csv` file is in the `data` directory
+1. Make sure your `saved_places.csv` file is in the `data` directory.
 2. Run the script:
 
 ```bash
@@ -59,7 +60,7 @@ npm start
 The script will:
 
 - Read your saved places CSV file
-- Extract the CID (Unique Identifier for a Google Business Profiile) from each place's URL
+- Extract the CID (Unique Identifier for a Google Business Profile) from each place's URL
 - Fetch additional details from the Google Places API
 - Create a new file `data/enriched_places.csv` with all the additional information
 
