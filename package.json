@@ -1,0 +1,22 @@
+{
+  "name": "google-saved-places-enricher",
+  "version": "1.0.0",
+  "description": "Enrich Google Saved Places with more data",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node-dev src/index.ts"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.28",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
